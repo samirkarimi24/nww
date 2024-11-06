@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Graphic - طراحی و تبلیغات حرفه‌ای</title>
+
+    <!-- فونت‌ها را بارگذاری کنید -->
+    <style>
+        @font-face {
+            font-family: 'TunisiaBold';
+            src: url('Tunisia_MRT.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'ErasBoldITC';
+            src: url('ErasBoldITC.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Miremad';
+            src: url('MiremadRegular.ttf') format('truetype');
+        }
+
+        /* تنظیمات اصلی تم */
+        body {
+            background-color: #57005f;
+            background-image: url('dots.png'); /* تکسچر خطوط دایره‌ای */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'TunisiaBold', sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background-color: rgba(61, 1, 57, 0.8);
+            position: relative;
+        }
+
+        header img {
+            width: 100px;
+            height: auto;
+        }
+
+        .slogan {
+            font-family: 'Miremad', sans-serif;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #ecbd01;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #d0aaff;
+        }
+
+        .menu {
+            margin: 20px;
+            font-size: 1.3em;
+            cursor: pointer;
+            color: #bb86fc;
+        }
+
+        .menu:hover {
+            color: #d0aaff;
+        }
+
+        .portfolio {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item {
+            background-color: #470046;
+            padding: 15px;
+            border-radius: 5px;
+            width: 300px;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .item h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .like-comment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #ca0032;
+            cursor: pointer;
+        }
+
+        .footer-contact {
+            background-color: #420141;
+            padding: 20px;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .footer-contact a {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: #ecbd01;
+        }
+    </style>
+
+    <script>
+        // نمایش نمونه کارها با کلیک روی منو
+        function togglePortfolio() {
+            var portfolio = document.querySelector('.portfolio');
+            portfolio.style.display = portfolio.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // لایک کردن با شمارش قلب
+        function likeItem(event) {
+            let likeCount = event.target.nextElementSibling;
+            likeCount.innerHTML = parseInt(likeCount.innerHTML) + 1;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="sklogo.PNG" alt="لوگوی سایت">
+        <p class="slogan">طراحی و تبلیغات حرفه‌ای تخصص ماست</p>
+        <nav>
+            <a href="https://wa.me/+93780404809" target="_blank">واتس‌اپ</a>
+            <a href="https://www.facebook.com/skgraphic.af" target="_blank">فیسبوک</a>
+            <a href="https://www.instagram.com/_skgraphic_" target="_blank">انستاگرام</a>
+        </nav>
+    </header>
+
+    <div class="menu" onclick="togglePortfolio()">نمونه کار های ها</div>
+
+    <section class="portfolio">
+        <!-- نمونه کار ۱ -->
+        <div class="item">
+            <img src="sample1.jpg" alt="نمونه کار ۱">
+            <h3>نمونه کار ۱</h3>
+            <p>توضیح کوتاه درباره این نمونه کار</p>
+            <div class="like-comment">
+                <span onclick="likeItem(event)">❤</span>
+                <span>0</span>
+            </div>
+        </div>
+
+        <!-- نمونه کار ۲ -->
+        <div class="item">
+            <img src="sample2.jpg" alt="نمونه کار ۲">
+            <h3>نمونه کار ۲</h3>
+            <p>توضیح کوتاه درباره این نمونه کار</p>
+            <div class="like-comment">
+                <span onclick="likeItem(event)">❤</span>
+                <span>0</span>
+            </div>
+        </div>
+ <!-- نمونه کار ۲ -->
+ <div class="item">
+    <img src="sample2.jpg" alt="نمونه کار ۲">
+    <h3>نمونه کار ۲</h3>
+    <p>توضیح کوتاه درباره این نمونه کار</p>
+    <div class="like-comment">
+        <span onclick="likeItem(event)">❤</span>
+        <span>0</span>
+    </div>
+</div>
+
+        <!-- نمونه کار ۳ -->
+        <div class="item">
+            <img src="sample3.jpg" alt="نمونه کار ۳">
+            <h3>نمونه کار ۳</h3>
+            <p>توضیح کوتاه درباره این نمونه کار</p>
+            <div class="like-comment">
+                <span onclick="likeItem(event)">❤</span>
+                <span>0</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-contact">
+        <p>برای تماس با ما:</p>
+        <p>ایمیل: <a href="mailto:example@example.com">drsamirkarimi@gmail.com</a></p>
+        <p>شماره تماس: 09 48 40 80 07</p>
+    </footer>
+</body>
+</html>
